@@ -1,3 +1,4 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 the /capacitor folder holds the file for ionic capacitor to communicate with electron.
 
 File: ElectronHome.tsx //capacitor entry points called to communicate with electron
@@ -6,6 +7,7 @@ Method Entry Points Establishment:
 	window.electron.StopCoderActivityListener()
 	window.electron.GetCoderActivityData()
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 the /electron folder holds the file for electron communicate with key-reader-logger script and to ionic capacitor application.
 
 File: preload.js //define the interface between electron entry points and capacitor entry points.
@@ -27,6 +29,7 @@ Method Entry Points Establishment:
 	electron_3.ipcMain.handle('exitApp', (...) => {...});
 	electron_3.ipcMain.handle('getCoderActivityData', (...) => {...});
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 the /keyReaderLogger folder holds the files for key-reader-logger to communicate with electron.
 
 File: kHook.exe //establish hook actions on windows to listen to keypress and mouse activity, the program is from https://unpkg.com/browse/key-reader-logger@1.0.1-d/
